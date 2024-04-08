@@ -7,5 +7,5 @@ import {ServerElement} from "../app.component";
   styleUrl: './server-element.component.css'
 })
 export class ServerElementComponent {
-  @Input({required: true}) element: ServerElement;
+  @Input({required: true, alias: 'srvElement'}) element: ServerElement;
 }
