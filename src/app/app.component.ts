@@ -13,4 +13,20 @@ export interface ServerElement {
 })
 export class AppComponent {
   serverElements: ServerElement[] = [{type: 'server', name: 'Test', content: 'Just a test!'}];
+
+  onServerAdded(serverData: {serverName: string, serverContent: string}) {
+    this.serverElements.push({
+      type: 'server',
+      name: serverData.serverName,
+      content: serverData.serverContent,
+    });
+  }
+
+  onAddBlueprintAdded(blueprintData: {serverName: string, serverContent: string}) {
+    this.serverElements.push({
+      type: 'blueprint',
+      name: blueprintData.serverName,
+      content: blueprintData.serverContent,
+    });
+  }
 }
