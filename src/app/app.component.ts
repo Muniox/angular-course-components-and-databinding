@@ -1,10 +1,16 @@
 import { Component } from '@angular/core';
 
+export interface ServerElement {
+  type: string;
+  name: string;
+  content: string;
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-course-components-and-databinding';
+  serverElements: ServerElement[] = [{type: 'server', name: 'Test', content: 'Just a test!'}];
 }
